@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {Router, Route, Switch} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Header from './components/Header';
+import DeliveryCreate from './components/DeliveryCreate';
+import DeliveryEdit from './components/DeliveryEdit';
+import DeliveryList from './components/DeliveryList';
+import history from './history';
+
+const App = () => {
+    return (
+        <div className="app">
+            <div className="container-fluid">
+                <div className="wrapper">
+                    <Router history={history}>
+                        <Header />
+                        <Switch>
+                            <Route path="/" exact component={DeliveryList}></Route>
+                            <Route path="/delivery" exact component={DeliveryList}></Route>
+                            <Route path="/delivery/create" exact component={DeliveryCreate}></Route>
+                            <Route path="/delivery/:id" component={DeliveryEdit}></Route>
+                        </Switch>
+                    </Router>
+                </div>
+            </div>
+        </div>
+    )
+};
 
 export default App;

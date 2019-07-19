@@ -1,0 +1,252 @@
+/** variables */
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #898989;
+
+$color-primary: #4c608b;
+$color-primary-light: #2e458b;
+$color-primary-hover: #15208b;
+
+$color-row-hover: #f3f3f3;
+
+
+
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.wrapper {
+  min-height: 96%;
+  box-shadow: 0 1.5rem 4rem rgba(black, .15);
+  margin-top: 2rem;
+}
+
+
+.header {
+  background: linear-gradient(to right bottom, rgba($color-primary-hover, 0.8), rgba($color-primary-light, 0.8)), url(./assets/images/header.png) no-repeat right;
+  background-size: contain;
+  height: 12rem;
+  position: relative;
+  backface-visibility: hidden;
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.6rem;
+    color: $color-white;
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    &:hover {
+      text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+
+  70% {
+    transform: translateY(0.3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@mixin gridbuttons {
+  i {
+    line-height: 1.2;
+  }
+  border-radius: 50%;
+  &:hover {
+    background-color: rgba($color-primary-hover, 0.8);
+    color: $color-white;
+  }
+}
+
+.delivery-list {
+  padding: 4rem;
+  position: relative;
+
+  &__title {
+    display: inline;
+  }
+
+  &__filter {
+    padding: 5rem 0;
+  }
+
+  &__button-create {
+    position: absolute;
+    right: 0;
+    font-size: 1.6rem;
+    background-color: $color-primary;
+    color: $color-white;
+    border-color: $color-primary;
+    &:hover {
+      background-color: $color-primary-hover;
+      border-color: $color-primary-hover;
+    }
+  }
+
+  &__button-edit {
+    @include gridbuttons;
+  }
+
+  &__button-delete {
+    @include gridbuttons;
+  }
+
+  button {
+    font-size: 1.6rem;
+  }
+
+  form {
+    font-size: 1.4rem;
+
+    .form-control {
+      font-size: 1.4rem;
+    }
+  }
+
+  .pagination {
+    font-size: 1.6rem;
+    .page-link{
+      color: $color-gray;
+      border:none;
+    }
+    li {
+      padding: 0.5rem 1.2rem;
+
+      &.active{
+        background-color: $color-primary;
+        border-color: $color-primary;
+        border-radius: 50%;
+
+        a {
+          color: $color-white;
+        }
+
+        &:hover{
+          background-color: $color-primary-hover;
+          border-color: $color-primary-hover;
+          color: $color-white;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+
+
+    }
+  }
+
+}
+
+.grid {
+
+  table {
+    border: none;
+    border-collapse: collapse;
+
+    thead {
+      font-size: 1.5rem;
+      th {
+        border:none;
+      }
+
+    }
+
+    tbody {
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: $color-gray;
+
+      tr {
+
+        &:hover {
+          box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+        }
+
+        td {
+          vertical-align: middle;
+          text-align: left;
+          border-top: 1px solid #f4f5f8;
+
+          &:nth-last-child(1) {
+            text-align: center;
+          }
+        }
+
+        th {
+          border-bottom: 2px solid #f4f5f8;
+          vertical-align: middle;
+        }
+
+        button {
+          color: rgba($color-primary-light, 0.8);
+          margin: 0 1.5rem;
+          display: inline-block;
+          &:hover{
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.admin-data {
+  position: relative;
+  padding: 4rem;
+  font-size: 1.4rem;
+
+  form {
+    margin-top: 4rem;
+
+    .form-control {
+      font-size: 1.4rem;
+    }
+
+    input.btn {
+      font-size: 1.4rem;
+    }
+
+  }
+}
+
+.commercial-contact {
+  margin: 2rem 0;
+
+  &__wrapper {
+    margin-top: 4rem;
+  }
+}
