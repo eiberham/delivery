@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import AdministrativeData from './AdministrativeData';
+import DeliveryForm from './DeliveryForm';
 
 import service from '../apis/service';
 
@@ -42,7 +42,7 @@ class DeliveryCreate extends Component {
         return (
             <div>
                 <h1>Crear Delivery</h1>
-                <AdministrativeData mode={this.mode} onSubmitForm={this.onSubmit} onCancel={this.onCancel}/>
+                <DeliveryForm mode={this.mode} onSubmitForm={this.onSubmit} onCancel={this.onCancel}/>
             </div>
         )
     }

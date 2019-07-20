@@ -1,24 +1,6 @@
 {
   "delivery": [
     {
-      "name": "wwsswswsw",
-      "phone": "6778909",
-      "description": "eddede",
-      "specialty": "eddee",
-      "address": "ededed",
-      "schedule_init": "02:02",
-      "schedule_end": "02:02",
-      "main_name": "edede",
-      "main_lastname": "ededed",
-      "main_phone": "ededed",
-      "main_email": "ededed@gmail.com",
-      "other_name": "ededde",
-      "other_lastname": "deed",
-      "other_phone": "eded",
-      "other_email": "wwww@gmail.com",
-      "id": 1
-    },
-    {
       "id": 2,
       "name": "Casa de comida 2",
       "address": "Palermo Hollywood",
@@ -136,6 +118,24 @@
       "lastname": "Gunter",
       "email": "romina@gmail.com",
       "id": 20
+    },
+    {
+      "name": "EL Rincon Norteño Tucuhuehd",
+      "phone": "12345678",
+      "description": "Empanadas tucumanas ",
+      "specialty": "Carne suave",
+      "address": "belgrano",
+      "schedule_init": "02:02",
+      "schedule_end": "02:02",
+      "main_commercial_contact_name": "Ana",
+      "main_commercial_contact_lastname": "Lugo",
+      "main_commercial_contact_phone": "11223344",
+      "main_commercial_contact_email": "ana@gmail.com",
+      "other_commercial_contact_name": "a",
+      "other_commercial_contact_lastname": "b",
+      "other_commercial_contact_phone": "c",
+      "other_commercial_contact_email": "d@d.com",
+      "id": 21
     }
   ]
 }
