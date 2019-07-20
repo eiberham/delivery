@@ -1,0 +1,642 @@
+{
+  "config": {
+    "title": "Despegar Test",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {},
+    "separator": "-"
+  },
+  "props": [
+    {
+      "key": "src/App.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "App",
+          "methods": [],
+          "actualName": "App"
+        }
+      ]
+    },
+    {
+      "key": "src/components/Cell.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Cell",
+          "methods": [
+            {
+              "name": "renderSortButton",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onSortClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "name",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "renderCell",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Cell"
+        }
+      ]
+    },
+    {
+      "key": "src/components/CommercialContact.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CommercialContact",
+          "methods": [],
+          "actualName": "CommercialContact"
+        }
+      ]
+    },
+    {
+      "key": "src/components/DeliveryCreate.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DeliveryCreate",
+          "methods": [
+            {
+              "name": "onSubmit",
+              "docblock": null,
+              "modifiers": [
+                "async"
+              ],
+              "params": [
+                {
+                  "name": "fields",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onCancel",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "DeliveryCreate"
+        }
+      ]
+    },
+    {
+      "key": "src/components/DeliveryEdit.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DeliveryEdit",
+          "methods": [
+            {
+              "name": "fetchDelivery",
+              "docblock": null,
+              "modifiers": [
+                "async"
+              ],
+              "params": [
+                {
+                  "name": "id",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onSubmit",
+              "docblock": null,
+              "modifiers": [
+                "async"
+              ],
+              "params": [
+                {
+                  "name": "fields",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onCancel",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "DeliveryEdit"
+        }
+      ]
+    },
+    {
+      "key": "src/components/DeliveryForm.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DeliveryForm",
+          "methods": [
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "form",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "renderForm",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "DeliveryForm"
+        }
+      ]
+    },
+    {
+      "key": "src/components/DeliveryList.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DeliveryList",
+          "methods": [
+            {
+              "name": "fetchDeliveries",
+              "docblock": null,
+              "modifiers": [
+                "async"
+              ],
+              "params": [
+                {
+                  "name": "page",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "buildFilters",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onFilterFormSubmit",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "event",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onInputChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "event",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "createNewDelivery",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onDeleteItem",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "id",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handlePageClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "{selected}",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleSortClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "name",
+                  "type": null
+                },
+                {
+                  "name": "sort",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleEditClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "id",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "DeliveryList"
+        }
+      ]
+    },
+    {
+      "key": "src/components/Grid.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Grid",
+          "methods": [
+            {
+              "name": "renderHead",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "renderBody",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onPageClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "event",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onSortClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "name",
+                  "type": null
+                },
+                {
+                  "name": "sort",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onDeleteClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "id",
+                  "type": null
+                },
+                {
+                  "name": "name",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onEditClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "id",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Grid",
+          "props": {
+            "columns": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/components/Header.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Header",
+          "methods": [],
+          "actualName": "Header"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "key": "src/docs/Cell.mdx",
+      "value": {
+        "name": "Cell",
+        "menu": "Components",
+        "route": "/components/cell",
+        "id": "6ea6f699f69ec190d6f286c67b2dbc54",
+        "filepath": "src/docs/Cell.mdx",
+        "link": "",
+        "slug": "src-docs-cell",
+        "headings": [
+          {
+            "slug": "cell",
+            "depth": 1,
+            "value": "Cell"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/CommercialContact.mdx",
+      "value": {
+        "name": "CommercialContact",
+        "menu": "Components",
+        "route": "/components/commercialcontact",
+        "id": "c679fcfc1c3f8daa40a53db0ed4deb19",
+        "filepath": "src/docs/CommercialContact.mdx",
+        "link": "",
+        "slug": "src-docs-commercial-contact",
+        "headings": [
+          {
+            "slug": "commercialcontact",
+            "depth": 1,
+            "value": "CommercialContact"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/DeliveryCreate.mdx",
+      "value": {
+        "name": "DeliveryCreate",
+        "menu": "Components",
+        "route": "/components/deliverycreate",
+        "id": "aa5482bd5d0e3e3ef6172cb73a15f9b0",
+        "filepath": "src/docs/DeliveryCreate.mdx",
+        "link": "",
+        "slug": "src-docs-delivery-create",
+        "headings": [
+          {
+            "slug": "deliverycreate",
+            "depth": 1,
+            "value": "DeliveryCreate"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/DeliveryEdit.mdx",
+      "value": {
+        "name": "DeliveryEdit",
+        "menu": "Components",
+        "route": "/components/deliveryedit",
+        "id": "989ef81cd4ade7c7746392b0445da827",
+        "filepath": "src/docs/DeliveryEdit.mdx",
+        "link": "",
+        "slug": "src-docs-delivery-edit",
+        "headings": [
+          {
+            "slug": "deliveryedit",
+            "depth": 1,
+            "value": "DeliveryEdit"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/DeliveryForm.mdx",
+      "value": {
+        "name": "DeliveryForm",
+        "menu": "Components",
+        "route": "/components/deliveryform",
+        "id": "e400ccc076608ec5d9bd7ab245e84d50",
+        "filepath": "src/docs/DeliveryForm.mdx",
+        "link": "",
+        "slug": "src-docs-delivery-form",
+        "headings": [
+          {
+            "slug": "deliveryform",
+            "depth": 1,
+            "value": "DeliveryForm"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/DeliveryList.mdx",
+      "value": {
+        "name": "DeliveryList",
+        "menu": "Components",
+        "route": "/components/deliverylist",
+        "id": "e9cee6da55fca29327224db3ee64c777",
+        "filepath": "src/docs/DeliveryList.mdx",
+        "link": "",
+        "slug": "src-docs-delivery-list",
+        "headings": [
+          {
+            "slug": "deliverylist",
+            "depth": 1,
+            "value": "DeliveryList"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/Grid.mdx",
+      "value": {
+        "name": "Grid",
+        "menu": "Components",
+        "route": "/components/grid",
+        "id": "0733b46aed333622679bb124472f2eb1",
+        "filepath": "src/docs/Grid.mdx",
+        "link": "",
+        "slug": "src-docs-grid",
+        "headings": [
+          {
+            "slug": "grid",
+            "depth": 1,
+            "value": "Grid"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/Header.mdx",
+      "value": {
+        "name": "Header",
+        "menu": "Components",
+        "route": "/components/header",
+        "id": "60a1b4924e136f6834c722669aee5b59",
+        "filepath": "src/docs/Header.mdx",
+        "link": "",
+        "slug": "src-docs-header",
+        "headings": [
+          {
+            "slug": "header",
+            "depth": 1,
+            "value": "Header"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/Index.mdx",
+      "value": {
+        "name": "Main",
+        "route": "/",
+        "id": "5aa94bd0e2f14caa7440c1857f2819ed",
+        "filepath": "src/docs/Index.mdx",
+        "link": "",
+        "slug": "src-docs-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "delivery-online",
+            "depth": 1,
+            "value": "Delivery online"
+          },
+          {
+            "slug": "welcome-to-the-api-docs-of-delivery-online",
+            "depth": 2,
+            "value": "Welcome to the api docs of delivery online"
+          },
+          {
+            "slug": "in-the-components-section-on-the-left-hand-side-menu-you-will-find-a-brief-description-of-all-used-components-along-with-their-properties",
+            "depth": 3,
+            "value": "In the  components  section on the left hand side menu you will find a brief description of all used components along with their  properties ."
+          }
+        ]
+      }
+    }
+  ]
+}

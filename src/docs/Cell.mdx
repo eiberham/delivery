@@ -1,0 +1,37 @@
+---
+name: Cell
+menu: Components
+route: /components/cell
+---
+
+
+import {Playground, Props} from 'docz'
+import Cell from '../components/Cell'
+
+
+# Cell
+
+
+Dependant of the grid component, it displays the grid cells.
+
+
+## Properties
+
+
+Prop | Type | Description
+---|---|---
+`name` | string | Indicates the value to the cell that's shown on the grid
+`label` | string | Same as above
+`header` | boolean | Indicates whether the cell is part of the header or not.
+`sort` | string | Sort order 'asc' or 'desc'.
+`sortable` | boolean |  Indicates whether the cell header is sortable or not.
+`shown` | boolean | Indicates whether the cell is visible or not.
+`key` | string | The cell key.
+
+
+## Basic usage
+
+
+<Playground>
+    <Cell name="Celda 1" label="Celda 1" header={true} shown={true} key="key" sort="desc" sortable={true}/>
+</Playground>

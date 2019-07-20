@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import PropTypes from 'prop-types';
 import Cell from './Cell';
 import ReactPaginate from 'react-paginate';
 import {filter, map, pick, chain} from 'lodash';
@@ -9,6 +10,10 @@ class Grid extends React.Component {
     state = {
         columns: [],
         data: []
+    };
+
+    static propTypes = {
+        columns: PropTypes.bool
     };
 
     componentWillReceiveProps({data, total}) {
