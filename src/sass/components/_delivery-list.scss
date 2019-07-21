@@ -1,0 +1,80 @@
+.delivery-list {
+  padding: 4rem;
+  position: relative;
+
+  &__title {
+    display: inline;
+  }
+
+  &__filter {
+    padding: 5rem 0;
+  }
+
+  &__button-create {
+    position: absolute;
+    right: 4rem;
+    font-size: 1.6rem;
+    background-color: $color-primary;
+    color: $color-white;
+    border-color: $color-primary;
+    &:hover {
+      background-color: $color-primary-hover;
+      border-color: $color-primary-hover;
+    }
+  }
+
+  &__button-edit {
+    @include gridbuttons;
+  }
+
+  &__button-delete {
+    @include gridbuttons;
+  }
+
+  button {
+    font-size: 1.6rem;
+  }
+
+  form {
+    font-size: 1.4rem;
+
+    .form-control {
+      font-size: 1.4rem;
+    }
+  }
+
+  .pagination {
+    font-size: 1.6rem;
+    .page-link{
+      color: $color-gray;
+      border:none;
+    }
+    li {
+      padding: 0.5rem 1.2rem;
+
+      &.active{
+        background-color: $color-primary;
+        border-color: $color-primary;
+        border-radius: 50%;
+
+        a {
+          color: $color-white;
+        }
+
+        &:hover{
+          background-color: $color-primary-hover;
+          border-color: $color-primary-hover;
+          color: $color-white;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+
+
+    }
+  }
+
+}

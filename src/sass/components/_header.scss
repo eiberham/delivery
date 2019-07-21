@@ -1,0 +1,24 @@
+.header {
+  background: linear-gradient(to right bottom, rgba($color-primary-hover, 0.8), rgba($color-primary-light, 0.8)), url(./assets/images/header.png) no-repeat right;
+  background-size: contain;
+  height: 12rem;
+  position: relative;
+  backface-visibility: hidden;
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.6rem;
+    color: $color-white;
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    &:hover {
+      text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+  }
+}

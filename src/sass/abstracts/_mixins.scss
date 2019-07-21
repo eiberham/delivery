@@ -1,0 +1,10 @@
+@mixin gridbuttons {
+  i {
+    line-height: 1.2;
+  }
+  border-radius: 50%;
+  &:hover {
+    background-color: rgba($color-primary-hover, 0.8);
+    color: $color-white;
+  }
+}

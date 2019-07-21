@@ -43,7 +43,6 @@ class DeliveryForm extends Component {
     renderForm(){
         return (
             <Form onValidSubmit={(data) => { this.props.onSubmitForm(data)}} onChange={this.onChange}>
-                {/*<fieldset>*/}
                 <div className="row">
                     <div className="col">
                         <Input
@@ -104,7 +103,7 @@ class DeliveryForm extends Component {
                             placeholder=""
                             labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
                             elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-6']}
-                            help=""
+                            help="Este campo es opcional"
                             value={this.state.form.specialty}
                             validations="maxLength:500"
                             validationErrors={{
@@ -158,7 +157,6 @@ class DeliveryForm extends Component {
                         />
                     </div>
 
-                {/*</fieldset>*/}
                 </div>
 
                 <div className="row">
@@ -292,7 +290,7 @@ class DeliveryForm extends Component {
 
     render(){
         return (
-            <div className="admin-data">
+            <div className="delivery-form">
                 <h1>Datos Administrativos</h1>
                 <hr/>
                 {this.renderForm()}

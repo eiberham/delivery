@@ -1,0 +1,52 @@
+.grid {
+
+  table {
+    border: none;
+    border-collapse: collapse;
+
+    thead {
+      font-size: 1.5rem;
+      th {
+        border:none;
+      }
+
+    }
+
+    tbody {
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: $color-gray;
+
+      tr {
+
+        &:hover {
+          box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+        }
+
+        td {
+          vertical-align: middle;
+          text-align: left;
+          border-top: 1px solid #f4f5f8;
+
+          &:nth-last-child(1) {
+            text-align: center;
+          }
+        }
+
+        th {
+          border-bottom: 2px solid #f4f5f8;
+          vertical-align: middle;
+        }
+
+        button {
+          color: rgba($color-primary-light, 0.8);
+          margin: 0 1.5rem;
+          display: inline-block;
+          &:hover{
+
+          }
+        }
+      }
+    }
+  }
+}
