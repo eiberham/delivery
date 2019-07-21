@@ -376,16 +376,7 @@
               "returns": null
             }
           ],
-          "actualName": "Grid",
-          "props": {
-            "columns": {
-              "type": {
-                "name": "bool"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
+          "actualName": "Grid"
         }
       ]
     },

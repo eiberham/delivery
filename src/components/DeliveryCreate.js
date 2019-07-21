@@ -40,8 +40,10 @@ class DeliveryCreate extends Component {
 
     render(){
         return (
-            <div>
-                <h1>Crear Delivery</h1>
+            <div className="delivery-create">
+                <div className="delivery-create__header">
+                    <h1 className="delivery-create__title">Nuevo Delivery</h1>
+                </div>
                 <DeliveryForm mode={this.mode} onSubmitForm={this.onSubmit} onCancel={this.onCancel}/>
             </div>
         )

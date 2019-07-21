@@ -4,7 +4,6 @@ import CommercialContact from './CommercialContact';
 import {
     Input,
     Textarea,
-    Checkbox,
     Form,
 } from 'formsy-react-components';
 
@@ -23,7 +22,6 @@ class DeliveryForm extends Component {
             main_commercial_contact_lastname: '',
             main_commercial_contact_phone: '',
             main_commercial_contact_email: '',
-            checkbox_other_commercial_contact: false,
             other_commercial_contact_name: '',
             other_commercial_contact_lastname: '',
             other_commercial_contact_phone: '',
@@ -45,118 +43,123 @@ class DeliveryForm extends Component {
     renderForm(){
         return (
             <Form onValidSubmit={(data) => { this.props.onSubmitForm(data)}} onChange={this.onChange}>
-                <fieldset>
+                {/*<fieldset>*/}
+                <div className="row">
+                    <div className="col">
+                        <Input
+                            name="name"
+                            id="name"
+                            label="Nombre"
+                            type="text"
+                            placeholder=""
+                            labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
+                            elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-4']}
+                            help="Este campo es requerido"
+                            value={this.state.form.name}
+                            required
+                        />
 
-                    <Input
-                        name="name"
-                        id="name"
-                        label="Nombre"
-                        type="text"
-                        placeholder=""
-                        labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
-                        elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-2']}
-                        help="Este campo es requerido"
-                        value={this.state.form.name}
-                        required
-                    />
+                        <Input
+                            name="phone"
+                            id="phone"
+                            label="Teléfono"
+                            type="text"
+                            placeholder=""
+                            labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
+                            elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-4']}
+                            help="Este campo es requerido"
+                            value={this.state.form.phone}
+                            updateOnChange={true}
+                            required
+                            validations="maxLength:50"
+                            validationErrors={{
+                                maxLength: 'Sólo se permiten 50 caracteres',
+                            }}
+                        />
 
-                    <Input
-                        name="phone"
-                        id="phone"
-                        label="Teléfono"
-                        type="text"
-                        placeholder=""
-                        labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
-                        elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-2']}
-                        help="Este campo es requerido"
-                        value={this.state.form.phone}
-                        updateOnChange={true}
-                        required
-                        validations="maxLength:50"
-                        validationErrors={{
-                            maxLength: 'Sólo se permiten 50 caracteres',
-                        }}
-                    />
+                        <Textarea
+                            rows={3}
+                            cols={40}
+                            name="description"
+                            label="Descripción"
+                            placeholder=""
+                            labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
+                            elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-6']}
+                            help="Este campo es requerido"
+                            value={this.state.form.description}
+                            validations="maxLength:1000"
+                            validationErrors={{
+                                maxLength: 'Sólo se permiten 1000 caracteres',
+                            }}
+                            required
+                        />
+                    </div>
 
-                    <Textarea
-                        rows={3}
-                        cols={40}
-                        name="description"
-                        label="Descripción"
-                        placeholder=""
-                        labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
-                        elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-4']}
-                        help="Este campo es requerido"
-                        value={this.state.form.description}
-                        validations="maxLength:1000"
-                        validationErrors={{
-                            maxLength: 'Sólo se permiten 1000 caracteres',
-                        }}
-                        required
-                    />
+                    <div className="col">
+                        <Textarea
+                            rows={3}
+                            cols={40}
+                            name="specialty"
+                            label="Especialidades"
+                            placeholder=""
+                            labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
+                            elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-6']}
+                            help=""
+                            value={this.state.form.specialty}
+                            validations="maxLength:500"
+                            validationErrors={{
+                                maxLength: 'Sólo se permiten 500 caracteres',
+                            }}
+                        />
 
-                    <Textarea
-                        rows={3}
-                        cols={40}
-                        name="specialty"
-                        label="Especialidades"
-                        placeholder=""
-                        labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
-                        elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-4']}
-                        help=""
-                        value={this.state.form.specialty}
-                        validations="maxLength:500"
-                        validationErrors={{
-                            maxLength: 'Sólo se permiten 500 caracteres',
-                        }}
-                    />
+                        <Input
+                            name="address"
+                            id="address"
+                            label="Dirección"
+                            type="text"
+                            placeholder=""
+                            labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
+                            elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-4']}
+                            help="Este campo es requerido"
+                            value={this.state.form.address}
+                            required
+                            validations="maxLength:200"
+                            validationErrors={{
+                                maxLength: 'Sólo se permiten 200 caracteres',
+                            }}
+                        />
 
-                    <Input
-                        name="address"
-                        id="address"
-                        label="Dirección"
-                        type="text"
-                        placeholder=""
-                        labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
-                        elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-2']}
-                        help="Este campo es requerido"
-                        value={this.state.form.address}
-                        required
-                        validations="maxLength:200"
-                        validationErrors={{
-                            maxLength: 'Sólo se permiten 200 caracteres',
-                        }}
-                    />
+                        <Input
+                            name="schedule_init"
+                            id="schedule_init"
+                            label="Horario de atención"
+                            type="time"
+                            placeholder=""
+                            labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
+                            elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-2']}
+                            help="Este campo es requerido"
+                            value={this.state.form.schedule_init}
+                            required
+                            addonBefore={<span className="input-group-text">Inicio</span>}
+                        />
 
-                    <Input
-                        name="schedule_init"
-                        id="schedule_init"
-                        label="Horario de atención"
-                        type="time"
-                        placeholder=""
-                        labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
-                        elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-1']}
-                        help="Este campo es requerido"
-                        value={this.state.form.schedule_init}
-                        required
-                        addonBefore={<span className="input-group-text">Inicio</span>}
-                    />
+                        <Input
+                            name="schedule_end"
+                            id="schedule_end"
+                            label=""
+                            type="time"
+                            placeholder=""
+                            labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
+                            elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-2']}
+                            help="Este campo es requerido"
+                            value={this.state.form.schedule_end}
+                            required
+                            addonBefore={<span className="input-group-text">Cierre</span>}
+                        />
+                    </div>
 
-                    <Input
-                        name="schedule_end"
-                        id="schedule_end"
-                        label=""
-                        type="time"
-                        placeholder=""
-                        labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
-                        elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-1']}
-                        help="Este campo es requerido"
-                        value={this.state.form.schedule_end}
-                        required
-                        addonBefore={<span className="input-group-text">Cierre</span>}
-                    />
-
-                </fieldset>
+                {/*</fieldset>*/}
+                </div>
 
                 <div className="row">
                     <div className="col">
@@ -216,12 +219,6 @@ class DeliveryForm extends Component {
                     <div className="col">
                         <CommercialContact>
                             <fieldset className="mt-4">
-                                <Checkbox
-                                    name="checkbox_other_commercial_contact"
-                                    value={false}
-                                    label=""
-                                    valueLabel=" Idem contacto administrativo"
-                                />
                                 <Input
                                     name="other_commercial_contact_name"
                                     id="other_name"
@@ -230,8 +227,7 @@ class DeliveryForm extends Component {
                                     value={this.state.form.other_commercial_contact_name}
                                     labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
                                     elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-6']}
-                                    required={this.state.checkbox_other_commercial_contact}
-                                    help=""
+                                    help=" Este campo es opcional"
                                 />
                                 <Input
                                     name="other_commercial_contact_lastname"
@@ -241,8 +237,7 @@ class DeliveryForm extends Component {
                                     value={this.state.form.other_commercial_contact_lastname}
                                     labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
                                     elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-6']}
-                                    required={this.state.checkbox_other_commercial_contact}
-                                    help=""
+                                    help=" Este campo es opcional"
                                 />
                                 <Input
                                     name="other_commercial_contact_phone"
@@ -252,8 +247,7 @@ class DeliveryForm extends Component {
                                     value={this.state.form.other_commercial_contact_phone}
                                     labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
                                     elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-6']}
-                                    required={this.state.checkbox_other_commercial_contact}
-                                    help=""
+                                    help=" Este campo es opcional"
                                 />
                                 <Input
                                     name="other_commercial_contact_email"
@@ -263,8 +257,7 @@ class DeliveryForm extends Component {
                                     value={this.state.form.other_commercial_contact_email}
                                     labelClassName={[{'col-sm-3': false}, 'col-sm-2']}
                                     elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-6']}
-                                    required={this.state.checkbox_other_commercial_contact}
-                                    help=""
+                                    help=" Este campo es opcional"
                                     validations="isEmail"
                                     validationErrors={{
                                         isEmail: 'El email ingresado es incorrecto',

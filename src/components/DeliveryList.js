@@ -125,8 +125,10 @@ class DeliveryList extends React.Component {
                 </button>
                 <hr/>
                 <div className="delivery-list__filter">
+
                     <form className="form-inline" onSubmit={this.onFilterFormSubmit}>
                         <div className="form-group mb-2">
+                            <span className="col-sm-2"><i className="material-icons">filter_list</i></span>
                             <label htmlFor="name" className="col-sm-3 col-form-label">Nombre</label>
                             <input
                                 type="text"
