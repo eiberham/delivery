@@ -118,52 +118,54 @@ class DeliveryList extends React.Component {
 
     render(){
         return (
-            <div className="delivery-list">
-                <h1 className="delivery-list__title mb-2">Listado de Deliveries</h1>
-                <button className="btn btn-primary delivery-list__button-create mb-2" onClick={this.createNewDelivery}>
-                    Nuevo Delivery
-                </button>
-                <hr/>
-                <div className="delivery-list__filter">
+            <div className="delivery-list__container">
+                <div className="delivery-list">
+                    <h1 className="delivery-list__title mb-2">Listado de Deliveries</h1>
+                    <button className="btn btn-primary delivery-list__button-create mb-2" onClick={this.createNewDelivery}>
+                        Nuevo Delivery
+                    </button>
+                    <hr/>
+                    <div className="delivery-list__filter">
 
-                    <form className="form-inline" onSubmit={this.onFilterFormSubmit}>
-                        <div className="form-group mb-2">
-                            <span className="col-sm-2"><i className="material-icons">filter_list</i></span>
-                            <label htmlFor="name" className="col-sm-3 col-form-label">Nombre</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="name"
-                                name="name"
-                                onChange={this.onInputChange}
-                                value={this.state.filter.name}
-                            />
-                        </div>
-                        <div className="form-group mb-2">
-                            <label htmlFor="address" className="col-sm-3 col-form-label">Dirección</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="address"
-                                name="address"
-                                onChange={this.onInputChange}
-                                value={this.state.filter.address}
-                            />
-                        </div>
-                        <button className="btn btn-lg bg-transparent" type="submit">
-                            <i className="material-icons">search</i>
-                        </button>
-                    </form>
+                        <form className="form-inline" onSubmit={this.onFilterFormSubmit}>
+                            <div className="form-group mb-2">
+                                <span className="col-sm-2"><i className="material-icons">filter_list</i></span>
+                                <label htmlFor="name" className="col-sm-3 col-form-label">Nombre</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="name"
+                                    name="name"
+                                    onChange={this.onInputChange}
+                                    value={this.state.filter.name}
+                                />
+                            </div>
+                            <div className="form-group mb-2">
+                                <label htmlFor="address" className="col-sm-3 col-form-label">Dirección</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="address"
+                                    name="address"
+                                    onChange={this.onInputChange}
+                                    value={this.state.filter.address}
+                                />
+                            </div>
+                            <button className="btn btn-lg bg-transparent" type="submit">
+                                <i className="material-icons">search</i>
+                            </button>
+                        </form>
+                    </div>
+                    <Grid
+                        columns={this.state.columns}
+                        data={this.state.data}
+                        total={this.state.total}
+                        onDeleteItem={this.onDeleteItem}
+                        handlePageClick={this.handlePageClick}
+                        handleSortClick={this.handleSortClick}
+                        handleEditClick={this.handleEditClick}
+                    />
                 </div>
-                <Grid
-                    columns={this.state.columns}
-                    data={this.state.data}
-                    total={this.state.total}
-                    onDeleteItem={this.onDeleteItem}
-                    handlePageClick={this.handlePageClick}
-                    handleSortClick={this.handleSortClick}
-                    handleEditClick={this.handleEditClick}
-                />
             </div>
         )
     }

@@ -8,3 +8,11 @@
     color: $color-white;
   }
 }
+
+@mixin bullet {
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: $color-primary;
+  border-radius: 50%;
+  display: inline-block;
+}

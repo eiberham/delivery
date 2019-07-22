@@ -53,11 +53,12 @@ class DeliveryEdit extends React.Component {
 
     render() {
         return (
-            <div className="delivery-edit">
-                <div className="delivery-edit__header">
+            <div className="delivery-create__container">
+                <div className="delivery-edit">
                     <h1 className="delivery-edit__title">Editar Delivery</h1>
+                    <hr/>
+                    <DeliveryForm mode={this.mode} data={this.state.delivery} onSubmitForm={this.onSubmit} onCancel={this.onCancel}/>
                 </div>
-                <DeliveryForm mode={this.mode} data={this.state.delivery} onSubmitForm={this.onSubmit} onCancel={this.onCancel}/>
             </div>
         )
     }

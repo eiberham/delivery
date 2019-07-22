@@ -291,8 +291,10 @@ class DeliveryForm extends Component {
     render(){
         return (
             <div className="delivery-form">
-                <h1>Datos Administrativos</h1>
-                <hr/>
+                <h1 className="delivery-form__title">
+                    <span className="delivery-form__bullet"></span> Datos Administrativos
+                </h1>
+
                 {this.renderForm()}
             </div>
         )

@@ -1,7 +1,15 @@
 .delivery-form {
   position: relative;
-  padding: 4rem;
   font-size: 1.4rem;
+  margin-top: 4rem;
+
+  &__title {
+    font-size: 1.9rem;
+  }
+
+  &__bullet {
+    @include bullet;
+  }
 
   form {
     margin-top: 4rem;

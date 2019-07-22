@@ -1,3 +1,12 @@
+.delivery-list__container {
+  border: 1px solid #ebedf2;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  margin-top: 4rem;
+  box-shadow: 0px 1px 15px 1px rgba(69,65,78,0.08);
+  background-color: #fff;
+}
+
 .delivery-list {
   padding: 4rem;
   position: relative;
@@ -12,14 +21,18 @@
 
   &__button-create {
     position: absolute;
+    top: 3rem;
     right: 4rem;
     font-size: 1.6rem;
-    background-color: $color-primary;
-    color: $color-white;
+    background-color: $color-white;
+    color: $color-primary;
+    border-width: 1px;
     border-color: $color-primary;
+    border-radius: 4px;
+    padding: 6px;
     &:hover {
-      background-color: $color-primary-hover;
-      border-color: $color-primary-hover;
+      background-color: rgba($color-primary-hover, .8);
+      border-color: rgba($color-primary-hover, .8);
     }
   }
 
@@ -52,6 +65,15 @@
     li {
       padding: 0.5rem 1.2rem;
 
+      a {
+        color: $color-primary;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
       &.active{
         background-color: $color-primary;
         border-color: $color-primary;
@@ -59,6 +81,11 @@
 
         a {
           color: $color-white;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
 
         &:hover{
