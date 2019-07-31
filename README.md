@@ -6,6 +6,10 @@ The backend server is provided by json server module. The cool thing about this 
 
 Also there's a fancy documentation site that provides information about every component properties via docz package.
 
+<p align="center">
+  <img src="delivery.png" />
+</p>
+
 ## How to run it ?
 
 ### `npm install` or `yarn install`
